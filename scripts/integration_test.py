@@ -6,6 +6,11 @@ from brownie import accounts, config, TeamBounties, Payment
 PARTICIPANTS = [accounts[1], accounts[2], accounts[3]]
 STAKES = [30,30,40]
 
+"""
+Full example of how the contract should be used.
+
+"""
+
 def deploy():
     print("Deploying Payment contract")
     payment = Payment.deploy(PARTICIPANTS, STAKES, {"from": accounts[0]})
